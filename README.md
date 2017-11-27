@@ -2,8 +2,8 @@
 npdejs mysql rbac migration restapi jwt acl
 
 ## install 
-npm install
-change config/config.json
+npm install <br>
+change config/config.json <br>
 ./node_modules/.bin/sequelize db:migrate
 
 ## run
