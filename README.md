@@ -1,5 +1,5 @@
 # symoda
-npdejs mysql rbac migration restapi jwt acl
+simple project on nodejs, mysql, sequelize, jwt, acl, restfullapi
 
 ## install 
 npm install <br>
