@@ -4,7 +4,6 @@ let express = require('express');
 let session = require('express-session');
 let bodyParser = require('body-parser');
 
-let isProduction = process.env.NODE_ENV === 'production';
 
 let app = express();
 
@@ -15,7 +14,7 @@ app.use(session({secret: 'conduit', cookie: {maxAge: 60000}, resave: false, save
 
 app.use(require('./routes'));
 
-if (!isProduction) {
+if (process.env.NODE_ENV === 'production') {
     app.use(function (err, req, res, next) {
         console.log(err.stack);
         res.status(err.status || 500);
